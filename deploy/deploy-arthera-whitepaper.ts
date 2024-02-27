@@ -28,28 +28,12 @@ export default async ({ getNamedAccounts, deployments }: any) => {
                 msg(awp.receipt.contractAddress)
             )
 
-            try {
-                console.log(
-                    "Please use `pnpm sourcify:arthera` to verify your contract."
-                )
-            } catch (error) {
-                console.error(error)
-            }
-
             break
         case "arthera-testnet":
             console.log(
                 "Arthera Whitepaper NFT contract deployed:",
                 msg(awp.receipt.contractAddress)
             )
-
-            try {
-                console.log(
-                    "Please use `pnpm sourcify:arthera-testnet` to verify your contract."
-                )
-            } catch (error) {
-                console.error(error)
-            }
 
             break
         case "sepolia":
