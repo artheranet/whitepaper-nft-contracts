@@ -27,15 +27,15 @@ export default async ({ getNamedAccounts, deployments }: any) => {
                 "Arthera Whitepaper NFT contract deployed:",
                 msg(awp.receipt.contractAddress)
             )
-
             break
+
         case "arthera-testnet":
             console.log(
                 "Arthera Whitepaper NFT contract deployed:",
                 msg(awp.receipt.contractAddress)
             )
-
             break
+
         case "sepolia":
             try {
                 console.log(

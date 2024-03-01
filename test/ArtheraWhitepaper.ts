@@ -21,27 +21,27 @@ describe("Arthera Whitepaper", function () {
     describe("Interactions", function () {
         it("Should mint 1 NFT", async function () {
             const { nft, alice } = await loadFixture(deployContracts)
-            await nft.safeMint()
+            await nft.safeMint(alice.address)
             expect(await nft.ownerOf(0)).to.be.equal(alice.address)
         })
         it("Should mint 100 NFTs", async function () {
             const { nft, alice } = await loadFixture(deployContracts)
             for (let i = 0; i < 100; i++) {
-                const mint = await nft.safeMint()
+                const mint = await nft.safeMint(alice.address)
                 await mint.wait(1)
             }
             expect(await nft.balanceOf(alice.address)).to.be.equal(100)
         })
         it("Should transfer the NFT", async function () {
             const { nft, alice, bob } = await loadFixture(deployContracts)
-            await nft.safeMint()
+            await nft.safeMint(alice.address)
             expect(await nft.ownerOf(0)).to.be.equal(alice.address)
             await nft.connect(alice).transferFrom(alice.address, bob.address, 0)
             expect(await nft.ownerOf(0)).to.be.equal(bob.address)
         })
         it("Should access the Whitepaper", async function () {
             const { nft, alice } = await loadFixture(deployContracts)
-            await nft.safeMint()
+            await nft.safeMint(alice.address)
             expect(await nft.balanceOf(alice.address)).to.be.equal(1)
         })
     })
