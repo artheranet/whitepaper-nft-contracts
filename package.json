@@ -1,7 +1,7 @@
 {
-    "name": "w3hc-hardhat-template",
+    "name": "whitepaper-nft-contracts",
     "version": "0.1.0",
-    "description": "",
+    "description": "White Paper NFT solidity contracts",
     "main": "index.js",
     "scripts": {
         "test": "hardhat test",
