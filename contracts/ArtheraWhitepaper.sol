@@ -40,9 +40,9 @@ contract ArtheraWhitepaper is
         return "mode=timestamp";
     }
 
-    function safeMint() public {
+    function safeMint(address _recipient) public {
         uint256 tokenId = _nextTokenId++;
-        _safeMint(msg.sender, tokenId);
+        _safeMint(_recipient, tokenId);
         _setTokenURI(tokenId, uri);
     }
 
