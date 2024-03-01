@@ -4,6 +4,7 @@ The NFT gives you access to the Arthera Whitepaper.
 
 - UI Github repo: https://github.com/w3hc/awp-ui 
 - Web app: https://whitepaper.arthera.net/
+- Mainnet deployment (verified): https://explorer.arthera.net/address/0xc005A14D96f1bBCc6d75c82F10cB615333DEc991?tab=contact_code 
 
 ## Install
 
